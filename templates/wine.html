@@ -1,0 +1,102 @@
+<html>
+<head>
+<style>
+.button {
+background-color: blue;
+	border: 5px solid #020353;
+	color: whitesmoke;
+	padding: 0.5em 0.5em;
+	text-align: center;
+	text-decoration: none;
+	font-size: 1em;
+	display: inline-block;
+	width: 20%;
+	border-radius: 10px;
+	box-shadow: 3px 3px 6px 0 #000; 
+}
+body {
+  background-image: url("{{url_for('static', filename='background.jpg')}}");
+  background-repeat: no-repeat;
+ background-size: 100% 100%;
+}
+h1{
+   background-color: red;
+  color: white;
+}
+h3{
+   background-color: red;
+  color: white;
+}
+
+
+</style>
+</head>
+<body>
+<center>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wine quality predictor</title>
+</head>
+<body> -->
+
+    <h1>Wine quality predictor</h1>
+    {% if result %}
+        <p>{{ result }}</p>
+    {% endif %}
+    <form method="POST" action="/predict">
+        <label>fixedacidity</label><br>
+        <input type="text" name="fixedacidity"><br><br>
+
+        <label>volatileacidity</label><br>
+        <input type="text" name="volatileacidity"><br><br>
+
+        <label>citricacid</label><br>
+        <input type="text" name="citricacid"><br><br>
+
+		<label>residualsugar</label><br>
+        <input type="text" name="residualsugar"><br><br>
+
+		<label>chlorides</label><br>
+        <input type="text" name="chlorides"><br><br>
+
+		<label>freesulfurdioxide</label><br>
+        <input type="text" name="freesulfurdioxide"><br><br>
+
+		<label>totalsulfurdioxide</label><br>
+        <input type="text" name="totalsulfurdioxide"><br><br>
+
+		<label>density</label><br>
+        <input type="text" name="density"><br><br>
+
+		<label>pH</label><br>
+        <input type="text" name="pH"><br><br>
+
+		<label>sulphates</label><br>
+        <input type="text" name="sulphates"><br><br>
+
+		<label>alcohol</label><br>
+        <input type="text" name="alcohol"><br><br>
+
+        <input type="submit" value="Predict" ><br><br>
+    </form>
+
+</body>
+</html>
+
+
+
+<!-- 
+<button type="submit" class="button">Predict</button>
+</form>
+<textarea>
+{{prediction_text}}
+</textarea>
+</pre>
+</center>
+</body>
+</html> -->
